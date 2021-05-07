@@ -110,7 +110,7 @@ namespace ExcelToAzure
 
         internal static string QuerryGet(string commandtext)
         {
-            string res = "[]";
+            string res = "";
             try
             {
                 commandtext = commandtext.Trim(new char[] { ' ', ';' });
@@ -121,8 +121,12 @@ namespace ExcelToAzure
                     connection.Open();
                     using (SqlDataReader reader = command.ExecuteReader())
                     {
-                        reader.Read();
-                        res = reader.GetString(0) ?? "[]";
+                        while (reader.Read())
+                        {
+                            res += (reader.GetString(0));
+                        }
+                        //reader.Read();
+                        //res = reader.GetString(0) ?? "[]";
                     }
                     connection.Close();
                 }
@@ -130,7 +134,9 @@ namespace ExcelToAzure
             catch (Exception e)
             {
                 Console.WriteLine("Error executing {0}\nerror:{1}", commandtext, e.Message);
+                throw e;
             }
+            if(String.IsNullOrEmpty(res)) { return "[]"; }
             return res;
         }
 
