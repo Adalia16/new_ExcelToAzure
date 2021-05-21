@@ -13,26 +13,24 @@ namespace ExcelToAzure
 
     public static class SQL
     {
-        static string ServerName = "euteg8yt58.database.windows.net";
-        static string Database = "LAPRECON", username = "AAAzureAdminLAPRECON", password = "wer.asc%)$#B4weAbsd234:)";
-        static string ConnectionString = "";
+        private static SqlConnection GetSqlConnection()
+        {
+                SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
+                builder.DataSource = "hdcco.database.windows.net";
+                builder.InitialCatalog = "LAPRECON";
+                builder.Authentication = SqlAuthenticationMethod.ActiveDirectoryIntegrated;
 
+                return new SqlConnection(builder.ConnectionString);
+        }
 
-        private static SqlConnection Connection() => new SqlConnection(ConnectionString);
         public static bool Connect(string user, string pass)
         {
             user = user.ToLower();
             try
             {
                 var result = false;
-                SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
-                builder.DataSource = ServerName;
-                builder.UserID = username;
-                builder.Password = password;
-                builder.InitialCatalog = Database;
-                ConnectionString = builder.ConnectionString;
 
-                using (var connection = Connection())
+                using (var connection = GetSqlConnection())
                 {
                     StringBuilder sb = new StringBuilder();
                     sb.Append("SELECT * from [user] where LOWER(name) like @user and password like @pass and active = 1 for JSON PATH;");
@@ -75,7 +73,7 @@ namespace ExcelToAzure
 
             try
             {
-                using (var connection = Connection())
+                using (var connection = GetSqlConnection())
                 {
                     connection.Open();
                     using (var transaction = connection.BeginTransaction())
@@ -115,7 +113,7 @@ namespace ExcelToAzure
             {
                 commandtext = commandtext.Trim(new char[] { ' ', ';' });
                 commandtext += " FOR JSON PATH;";
-                using (var connection = Connection())
+                using (var connection = GetSqlConnection())
                 using (var command = new SqlCommand(commandtext, connection))
                 {
                     connection.Open();
@@ -145,7 +143,7 @@ namespace ExcelToAzure
             try
             {
                 commandtext = commandtext.Trim();
-                using (var connection = Connection())
+                using (var connection = GetSqlConnection())
                 using (var command = new SqlCommand(commandtext, connection))
                 {
                     connection.Open();
@@ -171,7 +169,7 @@ namespace ExcelToAzure
 
             try
             {
-                using (var connection = Connection())
+                using (var connection = GetSqlConnection())
                 {
                     connection.Open();
                     using (var transaction = connection.BeginTransaction())
@@ -249,7 +247,7 @@ namespace ExcelToAzure
             var all = new List<string>();
             try
             {
-                using (var connection = Connection())
+                using (var connection = GetSqlConnection())
                 using (var command = new SqlCommand(commandtext, connection))
                 {
                     connection.Open();
@@ -327,7 +325,7 @@ namespace ExcelToAzure
                 x.Value = 0;
                 x.Visible = true;
             });
-            using (var connection = Connection())
+            using (var connection = GetSqlConnection())
             {
                 connection.Open();
                 using (var transaction = connection.BeginTransaction())

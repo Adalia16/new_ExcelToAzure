@@ -32,13 +32,13 @@
             this.title = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.arrowlabel = new System.Windows.Forms.Label();
             this.txtColumnName = new System.Windows.Forms.Label();
             this.txtDataProperty = new System.Windows.Forms.Label();
             this.ListBox = new System.Windows.Forms.ListBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.back = new System.Windows.Forms.Button();
             this.next = new System.Windows.Forms.Button();
-            this.arrowlabel = new System.Windows.Forms.Label();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -56,10 +56,10 @@
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
-            this.flowLayoutPanel1.MinimumSize = new System.Drawing.Size(600, 376);
+            this.flowLayoutPanel1.MinimumSize = new System.Drawing.Size(800, 463);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(32);
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(664, 400);
+            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(43, 39, 43, 39);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(885, 492);
             this.flowLayoutPanel1.TabIndex = 0;
             this.flowLayoutPanel1.WrapContents = false;
             // 
@@ -67,10 +67,10 @@
             // 
             this.title.AutoSize = true;
             this.title.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.title.Location = new System.Drawing.Point(32, 32);
-            this.title.Margin = new System.Windows.Forms.Padding(0, 0, 0, 24);
+            this.title.Location = new System.Drawing.Point(43, 39);
+            this.title.Margin = new System.Windows.Forms.Padding(0, 0, 0, 30);
             this.title.Name = "title";
-            this.title.Size = new System.Drawing.Size(417, 32);
+            this.title.Size = new System.Drawing.Size(525, 41);
             this.title.TabIndex = 1;
             this.title.Text = "LINK EXCEL COLUMNS TO DATA 1/20";
             // 
@@ -78,10 +78,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(32, 88);
-            this.label2.Margin = new System.Windows.Forms.Padding(0, 0, 0, 8);
+            this.label2.Location = new System.Drawing.Point(43, 110);
+            this.label2.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(275, 21);
+            this.label2.Size = new System.Drawing.Size(345, 28);
             this.label2.TabIndex = 4;
             this.label2.Text = "COLUMN FOR THIS DATA PROPERTY";
             // 
@@ -91,12 +91,24 @@
             this.panel2.Controls.Add(this.arrowlabel);
             this.panel2.Controls.Add(this.txtColumnName);
             this.panel2.Controls.Add(this.txtDataProperty);
-            this.panel2.Location = new System.Drawing.Point(32, 117);
-            this.panel2.Margin = new System.Windows.Forms.Padding(0, 0, 0, 8);
-            this.panel2.MinimumSize = new System.Drawing.Size(0, 25);
+            this.panel2.Location = new System.Drawing.Point(43, 148);
+            this.panel2.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
+            this.panel2.MinimumSize = new System.Drawing.Size(0, 31);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(600, 25);
+            this.panel2.Size = new System.Drawing.Size(800, 31);
             this.panel2.TabIndex = 6;
+            // 
+            // arrowlabel
+            // 
+            this.arrowlabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.arrowlabel.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold);
+            this.arrowlabel.Location = new System.Drawing.Point(201, 0);
+            this.arrowlabel.Margin = new System.Windows.Forms.Padding(0);
+            this.arrowlabel.Name = "arrowlabel";
+            this.arrowlabel.Size = new System.Drawing.Size(398, 31);
+            this.arrowlabel.TabIndex = 7;
+            this.arrowlabel.Text = "-------------->";
+            this.arrowlabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtColumnName
             // 
@@ -104,10 +116,10 @@
             this.txtColumnName.Dock = System.Windows.Forms.DockStyle.Right;
             this.txtColumnName.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtColumnName.ForeColor = System.Drawing.Color.Crimson;
-            this.txtColumnName.Location = new System.Drawing.Point(440, 0);
+            this.txtColumnName.Location = new System.Drawing.Point(599, 0);
             this.txtColumnName.Margin = new System.Windows.Forms.Padding(0);
             this.txtColumnName.Name = "txtColumnName";
-            this.txtColumnName.Size = new System.Drawing.Size(160, 25);
+            this.txtColumnName.Size = new System.Drawing.Size(201, 32);
             this.txtColumnName.TabIndex = 6;
             this.txtColumnName.Text = "SELECT EXISTING";
             this.txtColumnName.Click += new System.EventHandler(this.txtColumnName_Click);
@@ -120,7 +132,7 @@
             this.txtDataProperty.Location = new System.Drawing.Point(0, 0);
             this.txtDataProperty.Margin = new System.Windows.Forms.Padding(0);
             this.txtDataProperty.Name = "txtDataProperty";
-            this.txtDataProperty.Size = new System.Drawing.Size(160, 25);
+            this.txtDataProperty.Size = new System.Drawing.Size(201, 32);
             this.txtDataProperty.TabIndex = 5;
             this.txtDataProperty.Text = "SELECT EXISTING";
             // 
@@ -129,11 +141,11 @@
             this.flowLayoutPanel1.SetFlowBreak(this.ListBox, true);
             this.ListBox.Font = new System.Drawing.Font("Segoe UI", 14.25F);
             this.ListBox.FormattingEnabled = true;
-            this.ListBox.ItemHeight = 25;
-            this.ListBox.Location = new System.Drawing.Point(32, 150);
-            this.ListBox.Margin = new System.Windows.Forms.Padding(0, 0, 0, 24);
+            this.ListBox.ItemHeight = 32;
+            this.ListBox.Location = new System.Drawing.Point(43, 189);
+            this.ListBox.Margin = new System.Windows.Forms.Padding(0, 0, 0, 30);
             this.ListBox.Name = "ListBox";
-            this.ListBox.Size = new System.Drawing.Size(600, 129);
+            this.ListBox.Size = new System.Drawing.Size(799, 132);
             this.ListBox.TabIndex = 2;
             this.ListBox.SelectedIndexChanged += new System.EventHandler(this.ListBox_SelectedIndexChanged);
             // 
@@ -145,12 +157,12 @@
             this.panel1.AutoScroll = true;
             this.panel1.Controls.Add(this.back);
             this.panel1.Controls.Add(this.next);
-            this.panel1.Location = new System.Drawing.Point(32, 303);
+            this.panel1.Location = new System.Drawing.Point(43, 351);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
-            this.panel1.MaximumSize = new System.Drawing.Size(10000, 42);
-            this.panel1.MinimumSize = new System.Drawing.Size(600, 42);
+            this.panel1.MaximumSize = new System.Drawing.Size(13333, 52);
+            this.panel1.MinimumSize = new System.Drawing.Size(800, 52);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(600, 42);
+            this.panel1.Size = new System.Drawing.Size(800, 52);
             this.panel1.TabIndex = 4;
             // 
             // back
@@ -163,7 +175,7 @@
             this.back.Location = new System.Drawing.Point(0, 0);
             this.back.Margin = new System.Windows.Forms.Padding(0);
             this.back.Name = "back";
-            this.back.Size = new System.Drawing.Size(78, 42);
+            this.back.Size = new System.Drawing.Size(97, 52);
             this.back.TabIndex = 2;
             this.back.Text = "BACK";
             this.back.UseVisualStyleBackColor = false;
@@ -179,38 +191,27 @@
             this.next.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.next.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.next.ForeColor = System.Drawing.Color.White;
-            this.next.Location = new System.Drawing.Point(523, 0);
+            this.next.Location = new System.Drawing.Point(704, 0);
             this.next.Margin = new System.Windows.Forms.Padding(0);
             this.next.Name = "next";
-            this.next.Size = new System.Drawing.Size(77, 42);
+            this.next.Size = new System.Drawing.Size(96, 52);
             this.next.TabIndex = 3;
             this.next.Text = "NEXT";
             this.next.UseVisualStyleBackColor = false;
             this.next.Click += new System.EventHandler(this.create_Click);
             // 
-            // arrowlabel
-            // 
-            this.arrowlabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.arrowlabel.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold);
-            this.arrowlabel.Location = new System.Drawing.Point(160, 0);
-            this.arrowlabel.Margin = new System.Windows.Forms.Padding(0);
-            this.arrowlabel.Name = "arrowlabel";
-            this.arrowlabel.Size = new System.Drawing.Size(280, 25);
-            this.arrowlabel.TabIndex = 7;
-            this.arrowlabel.Text = "-------------->";
-            this.arrowlabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // ColumnSelection
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(664, 400);
+            this.ClientSize = new System.Drawing.Size(885, 492);
             this.ControlBox = false;
             this.Controls.Add(this.flowLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MinimumSize = new System.Drawing.Size(664, 400);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MinimumSize = new System.Drawing.Size(885, 492);
             this.Name = "ColumnSelection";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

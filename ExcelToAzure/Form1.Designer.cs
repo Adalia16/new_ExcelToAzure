@@ -44,11 +44,11 @@
             this.Dashboard.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.Dashboard.BackColor = System.Drawing.Color.White;
             this.Dashboard.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Dashboard.Location = new System.Drawing.Point(0, 106);
+            this.Dashboard.Location = new System.Drawing.Point(0, 130);
             this.Dashboard.Margin = new System.Windows.Forms.Padding(0);
-            this.Dashboard.MinimumSize = new System.Drawing.Size(664, 400);
+            this.Dashboard.MinimumSize = new System.Drawing.Size(885, 492);
             this.Dashboard.Name = "Dashboard";
-            this.Dashboard.Size = new System.Drawing.Size(664, 400);
+            this.Dashboard.Size = new System.Drawing.Size(885, 492);
             this.Dashboard.TabIndex = 2;
             // 
             // menuStrip1
@@ -56,14 +56,15 @@
             this.menuStrip1.AutoSize = false;
             this.menuStrip1.BackColor = System.Drawing.Color.LightSteelBlue;
             this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(0);
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.LoginMenu,
             this.ImportMenu,
             this.DataMenu});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(16, 0, 16, 0);
-            this.menuStrip1.Size = new System.Drawing.Size(664, 96);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(21, 0, 21, 0);
+            this.menuStrip1.Size = new System.Drawing.Size(885, 118);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -123,9 +124,10 @@
             this.progressBar.BackColor = System.Drawing.Color.LightSteelBlue;
             this.progressBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.progressBar.ForeColor = System.Drawing.Color.MediumAquamarine;
-            this.progressBar.Location = new System.Drawing.Point(0, 96);
+            this.progressBar.Location = new System.Drawing.Point(0, 118);
+            this.progressBar.Margin = new System.Windows.Forms.Padding(4);
             this.progressBar.Name = "progressBar";
-            this.progressBar.Size = new System.Drawing.Size(664, 10);
+            this.progressBar.Size = new System.Drawing.Size(885, 12);
             this.progressBar.Step = 1;
             this.progressBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.progressBar.TabIndex = 5;
@@ -133,17 +135,17 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(664, 496);
+            this.ClientSize = new System.Drawing.Size(885, 610);
             this.Controls.Add(this.Dashboard);
             this.Controls.Add(this.progressBar);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2);
-            this.MinimumSize = new System.Drawing.Size(680, 535);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MinimumSize = new System.Drawing.Size(901, 648);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Data Viewer";

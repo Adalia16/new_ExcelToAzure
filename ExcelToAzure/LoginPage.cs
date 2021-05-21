@@ -26,6 +26,7 @@ namespace ExcelToAzure
                 btnLogin.Text = "ATTEMPTING TO LOGIN...";
                 btnLogin.BackColor = Color.PaleTurquoise;
 
+                
                 if (SQL.Connect(txtUsername.Text, txtPassword.Text))
                 {
                     LoggedIn = true;
